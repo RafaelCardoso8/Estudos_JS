@@ -4,11 +4,11 @@ let qtd_acima60 = 0
 
 for (let i = 0; i < dados.length; i++){//percorrer o vetor 
     let posicao_dados = dados[i] //posicao_dados recebe a informação que estará na posição indicada por i
-    let idade = posicao_dados.substring(11,13) //?idade recebe os valores das posições em string
+    let idade = posicao_dados.substring(11,13) //idade recebe os valores das posições em string
     let idade_num = parseInt(idade) //converte a string em number
 
-       if(idade_num > 60){
-          qtd_acima60++
+       if(idade_num > 60){ // testase a idade é acima de 60 e adiciona  + 1 a qtd_acima60
+          qtd_acima60 ++
        }
 
 }
