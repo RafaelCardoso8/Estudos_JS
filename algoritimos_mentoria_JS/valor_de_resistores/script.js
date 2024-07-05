@@ -1,116 +1,117 @@
-let result = ""
+
 
 function calcularresistência(){
-    let primeiracor =  "azul"//document.getElementById('cor1')
-    let segundacor = "vermelho"//document.getElementById('cor2')
-    let terceiracor = "vermelho"//document.getElementById('cor3')
+    let primeiracor =  document.getElementById('cor1').value
+    let segundacor = document.getElementById('cor2').value
+    let terceiracor = document.getElementById('cor3').value
+    let result = document.getElementById('valor_do_resistor')
 
-    let valor1 = 0
-    let valor2 = 0
-    let valor3 = 0
+    let valor1 
+    let valor2 
+    let valor3
 
     if(primeiracor === "preto"){
-        valor1 = 0
+        valor1 = "0"
     }
     else if(primeiracor === "marrom"){
-        valor1 = 1
+        valor1 = "1"
     }
     else if(primeiracor === "vermelho"){
-        valor1 = 2
+        valor1 = "2"
     }
     else if(primeiracor === "laranja"){
-        valor1 = 3
+        valor1 = "3"
     }
     else if(primeiracor === "amarelo"){
-        valor1 = 4
+        valor1 = "4"
     }
     else if(primeiracor === "verde"){
-        valor1 = 5
+        valor1 = "5"
     }
     else if(primeiracor === "azul"){
-        valor1 = 6
+        valor1 = "6"
     }
     else if(primeiracor === "violeta"){
-        valor1 = 7
+        valor1 = "7"
     }
     else if(primeiracor === "cinza"){
-        valor1 = 8
+        valor1 = "8"
     }
     else if(primeiracor === "branco"){
-        valor1 = 9
+        valor1 = "9"
     }
 
     //segundacor
 
     if(segundacor === "preto"){
-        valor2 = 0
+        valor2 = "0"
     }
     else if(segundacor === "marrom"){
-        valor2 = 1
+        valor2 = "1"
     }
     else if(segundacor === "vermelho"){
-        valor2 = 2
+        valor2 = "2"
     }
     else if(segundacor === "laranja"){
-        valor2 = 3
+        valor2 = "3"
     }
     else if(segundacor === "amarelo"){
-        valor2 = 4
+        valor2 = "4"
     }
     else if(segundacor === "verde"){
-        valor2 = 5
+        valor2 = "5"
     }
     else if(segundacor === "azul"){
-        valor2 = 6
+        valor2 = "6"
     }
     else if(segundacor === "violeta"){
-        valor2 = 7
+        valor2 = "7"
     }
     else if(segundacor === "cinza"){
-        valor2 = 8
+        valor2 = "8"
     }
     else if(segundacor === "branco"){
-        valor2 = 9
+        valor2 = "9"
     }
 
     //terceiracor
 
     if(terceiracor === "preto"){
-        valor3 = 0
-    }
-    else if(terceiracor === "marrom"){
         valor3 = 1
     }
+    else if(terceiracor === "marrom"){
+        valor3 = 10
+    }
     else if(terceiracor === "vermelho"){
-        valor3 = 2
+        valor3 = 100
     }
     else if(terceiracor === "laranja"){
-        valor3 = 3
+        valor3 = 1000
     }
     else if(terceiracor === "amarelo"){
-        valor3 = 4
+        valor3 = 100000
     }
     else if(terceiracor === "verde"){
-        valor3 = 5
+        valor3 = 1000000
     }
     else if(terceiracor === "azul"){
-        valor3 = 6
+        valor3 = 10000000
     }
     else if(terceiracor === "violeta"){
-        valor3 = 7
+        valor3 = 100000000
     }
-    else if(terceiracor === "cinza"){
-        valor3 = 8
+    else if(terceiracor === "dourado"){
+        valor3 = 0.1
     }
-    else if(terceiracor === "branco"){
-        valor3 = 9
+    else if(terceiracor === "prata"){
+        valor3 = 0.01
     }
+    
+    let valor_final =(parseInt(valor1.toString() + valor2.toString())) * valor3;
 
+    console.log(valor_final)
 
-
-   result = valor1 , valor2  * (valor3 * 1000)
+   result.innerHTML = `O valor do resistor é ${valor_final} ohms` 
 }
 
-calcularresistência()
 
-console.log(result)
