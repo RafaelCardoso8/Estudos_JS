@@ -30,15 +30,13 @@ function verificar_palavra(entrada){
 
     //teste final- verificar o tamnho da palavra e se tem caractere especial
     if( verificar_esp == true && tamanho_palavra == true){
-        return "verdadeiro"
+        return "VERDADEIRO-OK!!!"
     }
     else{
-        return "falso"
+        return "FALSO-ESSA NÃO!!!"
     }    
 }
-
-
-console.log(verificar_palavra("234Adas"))
+console.log(verificar_palavra("234AdaWW"))
 console.log(verificar_palavra("b3"))
 console.log(verificar_palavra("fdbfbdbfdzfbfbfbfdbgdgbberrwewFYLÇFGHDTDSARW"))
 console.log(verificar_palavra("a3$e"))
