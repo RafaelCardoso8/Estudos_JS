@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Controle de naves da Frota Estelar</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    <header>
+        <h1>Controle de naves da Frota Estelar</h1>
+    </header>
+  <main>
+      <div id="titulo">
+        <h2>Naves</h2>
+        <span>"Ex astris, scientia" - Das estrelas vem o conhecimento.</span>
+      </div>
+      <div id="base">  
+        
+               <div id="atributos">
+                   <div id="input">
+                     <label for="Nome">Nome da Nave</label>
+                     <input type="text" id="nome" placeholder="Nome da Nave">
+                   </div>
+                   <div id="input">
+                    <label for="Classe">Classe</label>
+                    <input type="text" id="classe" placeholder="Classe">            
+                    </div>
+                    <div id="input">
+                    <label for="Capitão">Capitão</label>
+                    <input type="text" id="capitao" placeholder="Capitão">            
+                    </div>
+                    <div id="input">
+                    <label for="Velocidade de dobra">Velocidade de dobra</label>
+                    <input type="text" id="veldobra" placeholder="Velocidade de dobra">            
+                    </div>
+                    <div id="input">
+                    <label for="Armamento">Armamento</label>
+                    <input type="text" id="armamento" placeholder="Armamento">            
+                    </div>
+                    <div id="input">
+                    <label for="Tripulação">Tripulação</label>
+                    <input type="text" id="tripulacao" placeholder="Tripulação">            
+                    </div>
+               </div>
+          <button type="button" onclick="nave_da_frota_estelar.salvar()">Salvar</button>
+          <button type="button" onclick="nave_da_frota_estelar.cancelar()">Cancelar</button>
+          <button type="button" onclick="nave_da_frota_estelar.cosntruir()">Cosntuir uma nave</button>      
+      </div>
+      <div id="tabela">
+        <table border="1">
+            <thead>
+                <th>N de frota</th>
+                <th>Nome</th>
+                <th>Classe</th>
+                <th>Capitão</th>
+                <th>Velocidade de dobra</th>
+                <th>Armamento</th>
+                <th>Tripulantes</th>
+                <th>Ações</th>
+            </thead>
+            <tbody id="tbody">
+                <tr>
+                    <td>1</td>
+                    <td> USS Enterprise-D</td>
+                    <td>Galaxy</td>
+                    <td>Capitão Jean-Luc Picard</td>
+                    <td>9.5</td>
+                    <td>Média alto</td>
+                    <td>5.000</td>
+                    <td>
+                        <img src="img/setas-para-cima.png" alt="Enviar para missão">
+                        <img src="img/setas-para-baixo.png" alt="Retornar de missão">
+                    </td>
+                </tr>
+                <!--
+                <tr>
+                    <td>2</td>
+                    <td> USS Minas Gerais-D</td>
+                    <td>Galaxy</td>
+                    <td>Capitão Pedro II</td>
+                    <td>9.5</td>
+                    <td>Média alto</td>
+                    <td>5.000</td>
+                    <td>
+                        <img src="img/setas-para-cima.png" alt="Enviar para missão">
+                        <img src="img/setas-para-baixo.png" alt="Retornar de missão">
+                    </td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td> USS Monte Verde</td>
+                    <td>Galaxy</td>
+                    <td>Capitã Phaora Lin </td>
+                    <td>9.5</td>
+                    <td>Média alto</td>
+                    <td>5.000</td>
+                    <td>
+                        <img src="img/setas-para-cima.png" alt="Enviar para missão">
+                        <img src="img/setas-para-baixo.png" alt="Retornar de missão">
+                    </td>
+                </tr>
+                -->
+
+            </tbody>
+        </table>
+        
+      </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
