@@ -74,4 +74,12 @@ table td img{
     padding: 3px;
 }
 
+.missao {
+    background-color: rgb(209, 128, 219)
+}
+
+.retorno {
+    background-color: rgb(124, 167, 133); 
+}
+
 

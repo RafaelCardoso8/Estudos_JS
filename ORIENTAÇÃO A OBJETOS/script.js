@@ -38,14 +38,33 @@ class Nave_da_frota_Estelar{
             td_veldobra.innerText = this.array_nave[i].veldobra  
             td_armamento.innerText = this.array_nave[i].armamento 
             td_tripulacao.innerText = this.array_nave[i].tripulacao  
-            
-            let img_edit = document.createElement("img")
-            img_edit.src = 'img/setas-para-cima.png'
-            let img_edit2 = document.createElement("img")
-            img_edit2.src = 'img/setas-para-baixo.png'
 
-            td_acoes.appendChild(img_edit)
-            td_acoes.appendChild(img_edit2)
+            let img_enviar = document.createElement("img")
+            img_enviar.src = 'img/setas-para-cima.png'
+            img_enviar.onclick = (function(id) {
+               return function() {
+                   nave_da_frota_estelar.enviar_para_missao(id)
+               }
+            })(this.array_nave[i].n_frota)
+
+            let img_retornar = document.createElement("img")
+            img_retornar.src = 'img/setas-para-baixo.png'
+            img_retornar.onclick = (function(id) {
+                return function() {
+                    nave_da_frota_estelar.retornar_de_missao(id);
+                };
+            })(this.array_nave[i].n_frota);
+            
+            /*let img_enviar = document.createElement("img")
+            img_enviar.src = 'img/setas-para-cima.png'
+            img_enviar.setAttribute("onclick","nave_da_frota_estelar.enviar_para_missao(" + this.array_nave[i].n_frota+")")
+
+            let img_retornar= document.createElement("img")
+            img_retornar.src = 'img/setas-para-baixo.png'
+            img_retornar.setAttribute("onclick","nave_da_frota_estelar.retornar_de_missao("+ this.array_nave[i].n_frota+")")*/
+
+            td_acoes.appendChild(img_enviar)
+            td_acoes.appendChild(img_retornar)
             
         }
 
@@ -107,9 +126,21 @@ class Nave_da_frota_Estelar{
             alert(msg)
             return false
         }
-
         return true
+    }
+    enviar_para_missao(id){
+        alert("enviada para a nave " + id)
+        let linha = document.getElementById(id)
+        linha.classList.remove('retorno')
+        linha.classList.add('missao')
 
+    }
+    retornar_de_missao(id){
+        alert("retornar de missão " + id)
+        let linha = document.getElementById(id)
+        linha.classList.remove('missao')
+        linha.classList.add('retorno')
+        
     }
 }
 
