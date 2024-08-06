@@ -1,6 +1,8 @@
-function changeName (name){    
+function changeName (name){
+    //console.log(name)
     console.log(this)
     this.name = name
+
 }
 
 //changeName("azul fora do escopo global")
@@ -23,3 +25,4 @@ const task2 = {
 task1.changeName("azul atualizado")
 
 console.log(task1)
+//console.log(task1,task2)
