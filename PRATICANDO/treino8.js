@@ -47,13 +47,20 @@ function Heroi(nome_heroi, classe_heroi, poder_heroi,magia,atuando){
 }
 
 const Izz = new Heroi("Izz", "Ranger", 45, 35, true)
-let Zarrox = new Heroi("Zarrox", "Mosqueteiro", 43, 28, true)
-let Mils = new Heroi("Mils", "lanceiro", 52, 20, true)
+let Zarrox = new Heroi("Zarrox", "Mosqueteiro", 45, 33, true)
+let Mils = new Heroi("Mils", "lanceiro", 52, 27, true)
 const Albero = new Heroi(" Albero", "Mago", 38,57,false)
+const Cinaria = new Heroi(" Cinaria", "Mago", 36,42,true)
+
+let armas = new Array('Espada longa', 'Sabre', 'Machado', 'Arco recurvo','Cajado')
+
 
 //console.log(Izz,Zarrox,Mils,Albero)
-//console.log(typeof Izz, typeof Zarrox, typeof Mils, typeof Albero)
+console.log(typeof Izz, typeof Zarrox, typeof Mils, typeof Albero, typeof Cinaria)
 console.log(Izz.calcular_poder_total())
 console.log(Zarrox.calcular_poder_total())
 console.log(Mils.calcular_poder_total())
 console.log(Albero.calcular_poder_total())
+console.log(Cinaria.calcular_poder_total())
+console.log(typeof armas)
+console.log(armas[2])
