@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heróis e Armas</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    <!-- Botões fixos para alternar entre cartas de heróis e armas -->
+    <div class="botoes-alternar">
+        <button id="mostrar-herois">Heróis</button>
+        <button id="mostrar-armas">Armas</button>
+    </div>
+
+    <div class="container">
+        <h1>Heróis e Armas</h1>
+
+        <!-- Formulário para criar uma nova arma -->
+        <h2>Criar Nova Arma</h2>
+        <form id="formulario-arma">            
+            <input type="text" id="nome_arma" placeholder="Nome da Arma" required>
+            <input type="number" id="poder_arma" placeholder="Poder da Arma - de 0a 100" required>
+            <button type="submit">Criar Arma</button>
+        </form>
+
+        <!-- Formulário para criar um novo herói -->
+        <h2>Criar Novo Herói</h2>
+        <form id="formulario-heroi">            
+            <input type="text" id="nome_heroi" placeholder="Nome do Herói" required>
+            <input type="text" id="classe_heroi" placeholder="Classe do Herói" required>
+            <input type="number" id="poder_heroi" placeholder="Poder do Herói- de 0a 100" required>
+            <input type="number" id="magia_h" placeholder="Magia - de 0a 100" required>
+            <select id="atuando">
+                <option value="true">Atuando</option>
+                <option value="false">Aposentado</option>
+            </select>
+            <select id="arma_h">
+                <option value="true">Possui Arma</option>
+                <option value="false">Sem Arma</option>
+            </select>
+            <select id="arma" disabled>
+                <!-- As opções de armas serão adicionadas dinamicamente aqui -->
+            </select>
+            <button type="submit">Criar Herói</button>
+        </form>
+
+        <!-- Área onde os cards dos heróis serão exibidos -->
+        <div id="cartas-herois" class="cartas-herois"></div>
+
+        <!-- Área onde os cards das armas serão exibidos -->
+        <div id="cartas-armas" class="cartas-armas" style="display:none;"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
