@@ -10,13 +10,13 @@ function criarArma(nome_arma, poder_arma){
 }
 
 // Função para criar um card de arma
-function criarCartaArma(arma) {
+function criarCartaArma(novaArma) {
     const carta = document.createElement('div')
     carta.classList.add('carta-arma')
 
     carta.innerHTML = `
-        <h3>${arma.nome_arma}</h3>
-        <p>Poder: ${arma.poder_arma}</p>
+        <h3>Arma: ${novaArma.nome_arma}</h3>
+        <p>Poder: ${novaArma.poder_arma}</p>
         <button class="botao-excluir">X</button>
     `
 
