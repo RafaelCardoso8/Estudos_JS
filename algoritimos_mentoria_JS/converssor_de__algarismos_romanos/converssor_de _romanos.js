@@ -1,4 +1,4 @@
-function romanos_para_cedimal(entrada){
+function romanos_para_decimal(entrada){
 
 
  let valor_decimal  = 0
@@ -36,7 +36,8 @@ function romanos_para_cedimal(entrada){
 
 }
 
-console.log(romanos_para_cedimal("XVII"))
-console.log(romanos_para_cedimal("III"))
-console.log(romanos_para_cedimal("LVIII"))
-console.log(romanos_para_cedimal("MCMXCIV"))
+console.log(romanos_para_decimal("XVII"))
+console.log(romanos_para_decimal("III"))
+console.log(romanos_para_decimal("LVIII"))
+console.log(romanos_para_decimal("MCMXCIV"))
+console.log(romanos_para_decimal("MCMLXXXV"))
